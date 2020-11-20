@@ -37,5 +37,6 @@ namespace AntiPattern.Model
 		public Guid ComboTemplateLineGuid { get; set; }
 		public string ComboTemplateName { get; set; }
 		public bool ProductIsBaked { get; set; }
+		public Price DiscountPrice { get; set; }
 	}
 }

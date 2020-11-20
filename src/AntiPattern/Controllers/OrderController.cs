@@ -20,7 +20,8 @@ namespace AntiPattern.Controllers
 		// GET
 		public async Task<IActionResult> Index(int id)
 		{
-			return Json(await _orderService.GetOrder(id));
+			var order = await _orderService.GetOrder(id);
+			return Json(order);
 		}
 
 		public async Task<IActionResult> FirstProductName(int id)
@@ -35,6 +36,18 @@ namespace AntiPattern.Controllers
 			_loyaltyService.FillClientInfo(order);
 
 			return Json(new {order.Client.Name});
+		}
+
+		public async Task<IActionResult> Receipt(int id)
+		{
+			var order = await _orderService.GetOrder(id);
+			_loyaltyService.CalculateDiscount(order);
+
+			return Json(new
+			{
+				FullPrice = order.Composition.Sum(x => x.Price.Value),
+				DiscountPrice = order.Composition.Sum(x => x.DiscountPrice.Value)
+			});
 		}
 	}
 }

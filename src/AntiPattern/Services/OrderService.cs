@@ -9,6 +9,7 @@ namespace AntiPattern.Services
 	{
 		public Task<Order> GetOrder(int id)
 		{
+			//mapping 
 			var order = GetOrderFromRepository(id);
 
 			return Task.FromResult(order);
@@ -27,6 +28,13 @@ namespace AntiPattern.Services
 				new ElementsBuilder<Client>(
 					new Client {Id = (id % 4) + 1}
 				));
+
+			fixture.Customizations.Add(
+				new ElementsBuilder<OrderLine>(
+					fixture.Build<OrderLine>()
+						.Without(x => x.DiscountPrice)
+						.Without(x => x.PriceWithoutSaleTax)
+						.Create()));
 
 			var order = fixture.Create<Order>();
 			return order;

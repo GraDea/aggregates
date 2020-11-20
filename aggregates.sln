@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C824F15-CCF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiPattern", "src\AntiPattern\AntiPattern.csproj", "{B5C84CCD-9C5C-42E0-A52B-BC469468FED9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "src\Patterns\Patterns.csproj", "{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +34,21 @@ Global
 		{B5C84CCD-9C5C-42E0-A52B-BC469468FED9}.Release|x64.Build.0 = Release|Any CPU
 		{B5C84CCD-9C5C-42E0-A52B-BC469468FED9}.Release|x86.ActiveCfg = Release|Any CPU
 		{B5C84CCD-9C5C-42E0-A52B-BC469468FED9}.Release|x86.Build.0 = Release|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Debug|x64.Build.0 = Debug|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Debug|x86.Build.0 = Debug|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Release|x64.Build.0 = Release|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Release|x86.ActiveCfg = Release|Any CPU
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B5C84CCD-9C5C-42E0-A52B-BC469468FED9} = {8C824F15-CCF2-4543-8C82-5ACEA4ADAC5E}
+		{1B2D1F49-92C1-4BDA-A709-D5A581952DD9} = {8C824F15-CCF2-4543-8C82-5ACEA4ADAC5E}
 	EndGlobalSection
 EndGlobal
