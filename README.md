@@ -2,7 +2,7 @@
 
 
 ![Mindmap](static/mindmap.png)
-(ссылка на актуальную версию)[https://coggle.it/diagram/X6E3YBlMvffZD8g0/t/%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82]
+[ссылка на актуальную версию](https://coggle.it/diagram/X6E3YBlMvffZD8g0/t/%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82)
 
 [Уходим от анемичной модели (пример)](https://github.com/kgrzybek/refactoring-from-anemic-to-rich-domain-model-example)
 
