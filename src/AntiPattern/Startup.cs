@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using AntiPattern.Controllers;
 using AntiPattern.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +17,8 @@ namespace AntiPattern
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IOrderService, OrderService>();
+            services.AddSingleton<ILoyaltyService, LoyaltyService>();
+            services.AddSingleton<IClientService, ClientService>();
             services.AddControllers();
         }
 

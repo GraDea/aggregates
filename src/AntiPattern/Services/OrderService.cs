@@ -9,6 +9,13 @@ namespace AntiPattern.Services
 	{
 		public Task<Order> GetOrder(int id)
 		{
+			var order = GetOrderFromRepository(id);
+
+			return Task.FromResult(order);
+		}
+
+		private Order GetOrderFromRepository(int id)
+		{
 			var fixture = new Fixture();
 			fixture.Customizations.Add(
 				new ElementsBuilder<DepartmentProduct>(
@@ -16,9 +23,13 @@ namespace AntiPattern.Services
 					new DepartmentProduct {Name = "SuperMeat"},
 					new DepartmentProduct {Name = "Arriva"}));
 
+			fixture.Customizations.Add(
+				new ElementsBuilder<Client>(
+					new Client {Id = (id % 4) + 1}
+				));
+
 			var order = fixture.Create<Order>();
-			
-			return Task.FromResult(order);
+			return order;
 		}
 	}
 }
