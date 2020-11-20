@@ -10,6 +10,11 @@ namespace AntiPattern.Services
 		public Task<Order> GetOrder(int id)
 		{
 			var fixture = new Fixture();
+			fixture.Customizations.Add(
+				new ElementsBuilder<DepartmentProduct>(
+					new DepartmentProduct {Name = "Pepperoni"},
+					new DepartmentProduct {Name = "SuperMeat"},
+					new DepartmentProduct {Name = "Arriva"}));
 
 			var order = fixture.Create<Order>();
 			
