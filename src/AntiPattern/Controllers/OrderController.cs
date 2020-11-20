@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using AntiPattern.Model;
 using AntiPattern.Services;
@@ -18,6 +19,13 @@ namespace AntiPattern.Controllers
 		public async Task<IActionResult> Index(int id)
 		{
 			return Json(await _orderService.GetOrder(id));
+		}
+
+		public async Task<IActionResult> FirstProductName(int id)
+		{
+			var order = await _orderService.GetOrder(id);
+
+			return Json(new {order.Composition.First().Product.Name});
 		}
 	}
 }
