@@ -14,4 +14,4 @@
 
 [Ряд статей](https://zimarev.com//tags/event-sourcing/) про Event Sourcing от Алексея Зимарева
 
-
+[Anti-Pattern: Optimistic Consistency](https://vladikk.com/2019/04/18/optimistic-consistency/) от Влада Хононова
