@@ -25,7 +25,7 @@ namespace AntiPattern.Controllers
 		{
 			var order = await _orderService.GetOrder(id);
 
-			return Json(new {order.Composition.First().Product.Name});
+			return Json(new {order.FirstProductName});
 		}
 	}
 }

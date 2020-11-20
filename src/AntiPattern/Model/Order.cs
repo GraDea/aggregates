@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AntiPattern.Model
 {
@@ -56,6 +57,7 @@ namespace AntiPattern.Model
 		public Guid DefectedOrderGuid { get; set; }
 
 		public int? TableNumber { get; set; }
+		public string FirstProductName => Composition.First().Product.Name;
 	}
 }
 
